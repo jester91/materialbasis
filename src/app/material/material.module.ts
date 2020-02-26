@@ -6,7 +6,12 @@ import {MatButtonModule,
   MatToolbarModule, 
   MatSidenavModule,
   MatMenuModule,
-  MatListModule, 
+  MatListModule,
+  MatDividerModule,
+  MatGridListModule,
+  MatExpansionModule,
+  MatCardModule,
+  MatTabsModule, 
   } from '@angular/material';
 import {MatBadgeModule} from '@angular/material/badge'
 const MaterialComponents=[
@@ -18,7 +23,12 @@ const MaterialComponents=[
   MatToolbarModule,
   MatSidenavModule,
   MatMenuModule,
-  MatListModule
+  MatListModule,
+  MatDividerModule,
+  MatGridListModule,
+  MatExpansionModule,
+  MatCardModule,
+  MatTabsModule
   
 ];
 

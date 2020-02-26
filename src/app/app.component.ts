@@ -7,7 +7,7 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'my-app';
-  notifications = 7;
+  notifications = 3;
   showSpinner=false;
   opened=false;
   log(state){
@@ -19,5 +19,9 @@ export class AppComponent {
     setTimeout(()=>{
       this.showSpinner=false;
     },5000);
+  }
+
+  logChange(index){
+    console.log(index)
   }
 }

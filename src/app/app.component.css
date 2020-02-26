@@ -1,19 +1,33 @@
-button{
+button {
     margin-right: 3rem;
 }
 
-div{
-    margin:3rem;
-}
-.navbar{
+.navbar {
     justify-content: space-between;
 }
 
-a{
+a {
     padding-right: 1rem;
     text-decoration: none;
 }
 
-.center{
-    margin:10rem;
+.center {
+    margin: 10rem;
+}
+
+mat-grid-tile {
+    background-color: green;
+}
+
+.example-card {
+    max-width: 400px;
+}
+
+.example-header-image {
+    background-image: url('https://scontent-vie1-1.xx.fbcdn.net/v/t1.15752-9/85157669_1699373906872459_8236102318433501184_n.jpg?_nc_cat=107&_nc_sid=b96e70&_nc_ohc=iGcDko3ROxsAX9utCem&_nc_ht=scontent-vie1-1.xx&oh=cdf5b2c69607ef8512fef358a92c6169&oe=5EEBBF37');
+    background-size: cover;
+}
+
+.doggo {
+    margin-left: 45em;
 }
