@@ -162,6 +162,223 @@
     {{tabRef.selectedIndex}}
 </div>
 <br/>
+<!--Stepper-->
+
+<mat-horizontal-stepper linear>
+    <mat-step label="Shipping address">Shipping Details</mat-step>
+    <mat-step label="Billing address" optional>
+        <p>Billing Address Details</p>
+
+        <div>
+            <button mat-button matStepperPrevious>Back</button>
+            <button mat-button matStepperNext>Next</button>
+        </div>
+    </mat-step>
+    <mat-step label="Place order">
+        <p>Order Details</p>
+
+        <div>
+            <button mat-button matStepperPrevious>Back</button>
+            <button mat-button matStepperNext>Next</button>
+        </div>
+    </mat-step>
+</mat-horizontal-stepper>
+
+<br/>
+<mat-vertical-stepper linear>
+    <mat-step label="Shipping address">Shipping Details</mat-step>
+    <mat-step label="Billing address" optional>
+        <p>Billing Address Details</p>
+
+        <div>
+            <button mat-button matStepperPrevious>Back</button>
+            <button mat-button matStepperNext>Next</button>
+        </div>
+    </mat-step>
+    <mat-step label="Place order">
+        <p>Order Details</p>
+
+        <div>
+            <button mat-button matStepperPrevious>Back</button>
+            <button mat-button matStepperNext>Next</button>
+        </div>
+    </mat-step>
+</mat-vertical-stepper>
+<br/>
+
+<!--INPUT-->
+<div style="background-color: green;">
+    <mat-form-field appearance="legacy">
+        <mat-label>Name</mat-label>
+        <input matInput required>
+        <mat-hint>Min 5 characters</mat-hint>
+    </mat-form-field>
+</div>
+
+<div style="background-color: green;">
+    <mat-form-field appearance="standard" color="accent">
+        <mat-label>Name</mat-label>
+        <input matInput required>
+        <mat-hint>Min 5 characters</mat-hint>
+    </mat-form-field>
+</div>
+
+<div style="background-color: green;" color="warn">
+    <mat-form-field appearance="outline">
+        <mat-label>Name</mat-label>
+        <input matInput required>
+        <mat-hint>Min 5 characters</mat-hint>
+    </mat-form-field>
+</div>
+<div style="background-color: green;">
+    <p>
+        <mat-form-field appearance="legacy">
+            <mat-label>Legacy form field</mat-label>
+            <input matInput placeholder="Placeholder">
+            <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+            <mat-hint>Hint</mat-hint>
+        </mat-form-field>
+    </p>
+    <p>
+        <mat-form-field appearance="standard">
+            <mat-label>Standard form field</mat-label>
+            <input matInput placeholder="Placeholder">
+            <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+            <mat-hint>Hint</mat-hint>
+        </mat-form-field>
+    </p>
+    <p>
+        <mat-form-field appearance="fill">
+            <mat-label>Fill form field</mat-label>
+            <input matInput placeholder="Placeholder">
+            <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+            <mat-hint>Hint</mat-hint>
+        </mat-form-field>
+    </p>
+    <p>
+        <mat-form-field appearance="outline">
+            <mat-label>Outline form field</mat-label>
+            <input matInput placeholder="Placeholder">
+            <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+            <mat-hint>Hint</mat-hint>
+        </mat-form-field>
+    </p>
+
+    <div class="example-container">
+        <mat-form-field appearance="fill">
+            <mat-label>Enter your password</mat-label>
+            <input matInput [type]="hide ? 'password' : 'text'">
+            <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+    <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+    </button>
+        </mat-form-field>
+
+        <mat-form-field appearance="fill">
+            <mat-label>Amount</mat-label>
+            <input matInput type="number" class="example-right-align">
+            <span matPrefix>$&nbsp;</span>
+            <span matSuffix>.00</span>
+        </mat-form-field>
+    </div>
+</div>
+
+<!-- SELECT COMPONENT-->
+
+
+<br/>
+<div style="background-color: green;">
+    <mat-form-field>
+        <mat-label>Topic</mat-label>
+        <mat-select [(value)]="selectedValue" multiple>
+            <mat-option>None</mat-option>
+            <mat-optgroup label="Web">
+                <mat-option value="angular">Angular</mat-option>
+                <mat-option value="react">React</mat-option>
+                <mat-option value="vue">Vue</mat-option>
+            </mat-optgroup>
+
+            <mat-optgroup label="Mobile">
+                <mat-option value="ionic">Ionic</mat-option>
+                <mat-option value="reactnative">React Native</mat-option>
+            </mat-optgroup>
+        </mat-select>
+    </mat-form-field>
+    {{selectedValue}}
+</div>
+
+<!-- AUTOCOMPLETE COMPONENT-->
+<div style="background-color: green;">
+    <form>
+        <mat-form-field>
+            <input type="text" matInput [matAutocomplete]="auto" [formControl]="myControl" />
+            <mat-autocomplete #auto="matAutocomplete" [displayWith]="displayFn">
+                <mat-option *ngFor="let option of filteredOptions | async" [value]="option">
+                    {{option}}
+                </mat-option>
+            </mat-autocomplete>
+        </mat-form-field>
+    </form>
+</div>
+<!-- CHECKBOXS -->
+
+<br/>
+
+<div style="background-color: grey;">
+    <mat-checkbox labelPosition="before" color="accent">
+        Iratkozz fel pls
+    </mat-checkbox>
+    <br/>
+
+    <mat-checkbox labelPosition="after">
+        Iratkozz fel pls
+    </mat-checkbox>
+    <br/>
+
+    <mat-checkbox labelPosition="after" color="warn">
+        Iratkozz fel pls
+    </mat-checkbox>
+
+</div>
+
+<!--  RADIO BUTTONS-->
+
+<br/>
+
+<div style="background-color: grey;">
+    <mat-radio-group>
+        <mat-radio-button value="angular">Angular</mat-radio-button>
+        <mat-radio-button value="react">React</mat-radio-button>
+        <mat-radio-button value="vue">Vue</mat-radio-button>
+    </mat-radio-group>
+    <br/>
+
+    <mat-checkbox labelPosition="after">
+        Iratkozz fel pls
+    </mat-checkbox>
+    <br/>
+
+    <mat-checkbox labelPosition="after" color="warn">
+        Iratkozz fel pls
+    </mat-checkbox>
+
+</div>
+
+<!--  DatePicker-->
+
+<br/>
+
+<div style="background-color: grey;">
+
+    <mat-form-field>
+        <input matInput [matDatepicker]="myDatePicker" [min]="minDate" [max]="maxDate">
+        <mat-datepicker-toggle [for]="myDatePicker" matSuffix></mat-datepicker-toggle>
+        <mat-datepicker #myDatePicker startView="year"></mat-datepicker>
+    </mat-form-field>
+
+
+</div>
+
+
 
 <!-- IT's not a BUG,IT'S A FEATURE
   <mat-sidenav-container>

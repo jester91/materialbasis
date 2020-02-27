@@ -11,7 +11,17 @@ import {MatButtonModule,
   MatGridListModule,
   MatExpansionModule,
   MatCardModule,
-  MatTabsModule, 
+  MatTabsModule,
+  MatStepperModule,
+  MatInputModule,
+  MatFormFieldModule,
+  MatSelectModule,
+  MatAutocompleteModule,
+  MatRadioModule,
+  MatCheckboxModule,
+  MatDatepickerModule,
+  NativeDateModule,
+  MatNativeDateModule, 
   } from '@angular/material';
 import {MatBadgeModule} from '@angular/material/badge'
 const MaterialComponents=[
@@ -28,7 +38,17 @@ const MaterialComponents=[
   MatGridListModule,
   MatExpansionModule,
   MatCardModule,
-  MatTabsModule
+  MatTabsModule,
+  MatStepperModule,
+  MatInputModule,
+  MatFormFieldModule,
+  MatSelectModule,
+  MatAutocompleteModule,
+  MatRadioModule,
+  MatCheckboxModule,
+  MatDatepickerModule,
+  MatNativeDateModule
+  
   
 ];
 
